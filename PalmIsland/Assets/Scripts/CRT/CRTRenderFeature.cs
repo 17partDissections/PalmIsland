@@ -19,10 +19,10 @@ namespace PSX
             renderer.EnqueuePass(crtPass);
         }
 
-        public override void SetupRenderPasses(ScriptableRenderer renderer, in RenderingData renderingData)
-        {
-            crtPass.Setup(renderer.cameraColorTargetHandle);
-        }
+        //public override void SetupRenderPasses(ScriptableRenderer renderer, in RenderingData renderingData)
+        //{
+        //    crtPass.Setup(renderer.cameraColorTargetHandle);
+        //}
     }
 
 
@@ -77,7 +77,7 @@ namespace PSX
             this.crtMaterial = CoreUtils.CreateEngineMaterial(shader);
         }
 
-        public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
+        public void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
         {
             if (this.crtMaterial == null)
             {

@@ -19,10 +19,10 @@ namespace PSX
             renderer.EnqueuePass(pixelationPass);
         }
         
-        public override void SetupRenderPasses(ScriptableRenderer renderer, in RenderingData renderingData)
-        {
-            pixelationPass.Setup(renderer.cameraColorTargetHandle);
-        }
+        //public override void SetupRenderPasses(ScriptableRenderer renderer, in RenderingData renderingData)
+        //{
+        //    pixelationPass.Setup(renderer.cameraColorTargetHandle);
+        //}
     }
     
     
@@ -55,7 +55,7 @@ namespace PSX
             this.pixelationMaterial = CoreUtils.CreateEngineMaterial(shader);
         }
     
-        public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
+        public void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
         {
             if (this.pixelationMaterial == null)
             {

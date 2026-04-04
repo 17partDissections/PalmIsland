@@ -19,10 +19,10 @@ namespace PSX
             renderer.EnqueuePass(fogPass);
         }
         
-        public override void SetupRenderPasses(ScriptableRenderer renderer, in RenderingData renderingData)
-        {
-            fogPass.Setup(renderer.cameraColorTargetHandle);
-        }
+        //public override void SetupRenderPasses(ScriptableRenderer renderer, in RenderingData renderingData)
+        //{
+        //    fogPass.Setup(renderer.cameraColorTargetHandle);
+        //}
         
     }
     
@@ -60,7 +60,7 @@ namespace PSX
             this.fogMaterial = CoreUtils.CreateEngineMaterial(shader);
         }
     
-        public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
+        public void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
         {
             if (this.fogMaterial == null)
             {
