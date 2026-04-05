@@ -7,17 +7,16 @@ namespace Q17pD.PalmIsland
     public class Palm : MonoBehaviour, IObservable
     {
         [SerializeField] private string _palmNameKey;
-        [Range(1, 10)][SerializeField] private float _speed;
         [SerializeField] private bool _doPatrol, _isAgressive;
         private NavMeshAgent _agent;
         private Player.Player _player;
         public string NameKey { get => _palmNameKey; }
+        public ObservableType Type { get => ObservableType.Interact; }
 
         public void Init(Player.Player player)
         {
             _player = player;
             _agent = GetComponent<NavMeshAgent>();
-            _agent.speed = _speed;
         }
         private void Update()
         {
