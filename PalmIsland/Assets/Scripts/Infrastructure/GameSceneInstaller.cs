@@ -10,11 +10,12 @@ namespace Q17pD.PalmIsland.Infrastructure
         [SerializeField] private AudioHandler _audioHandler;
         [SerializeField] private CinemachineBrain _cinemachineBrain;
         [SerializeField] private Player.Player _playerInstance;
-        [SerializeField] private List<Palm> _palms;
 
         public override void InstallBindings()
         {
             BindAudioHandler();
+            BindCinemachineBrain();
+            BindPlayer();
         }
         private void BindAudioHandler()
         {
@@ -24,10 +25,25 @@ namespace Q17pD.PalmIsland.Infrastructure
                 .AsSingle()
                 .NonLazy();
         }
+        private void BindCinemachineBrain()
+        {
+            Container
+                .Bind<CinemachineBrain>()
+                .FromInstance(_cinemachineBrain)
+                .AsSingle()
+                .NonLazy();
+        }
+        private void BindPlayer()
+        {
+            Container
+                .Bind<Player.Player>()
+                .FromInstance(_playerInstance)
+                .AsSingle()
+                .NonLazy();
+        }
         public void Awake()
         {
             _playerInstance.Init(_audioHandler, _cinemachineBrain);
-            foreach (var palm in _palms) palm.Init(_playerInstance);
         }
     }
 }

@@ -1,6 +1,7 @@
 using Q17pD.PalmIsland.Interface;
 using UnityEngine;
 using UnityEngine.AI;
+using Zenject;
 
 namespace Q17pD.PalmIsland
 {
@@ -13,7 +14,7 @@ namespace Q17pD.PalmIsland
         public string NameKey { get => _palmNameKey; }
         public ObservableType Type { get => ObservableType.Interact; }
 
-        public void Init(Player.Player player)
+        [Inject] private void Construct(Player.Player player)
         {
             _player = player;
             _agent = GetComponent<NavMeshAgent>();

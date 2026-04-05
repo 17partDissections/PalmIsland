@@ -7278,9 +7278,6 @@ MonoBehaviour:
   _audioHandler: {fileID: 1861766768}
   _cinemachineBrain: {fileID: 1145431432}
   _playerInstance: {fileID: 5135210489916906017}
-  _palms:
-  - {fileID: 1188610727}
-  - {fileID: 929925306}
 --- !u!1001 &333714375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10033,6 +10030,7 @@ GameObject:
   - component: {fileID: 410087041}
   - component: {fileID: 410087040}
   - component: {fileID: 410087042}
+  - component: {fileID: 410087043}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -10113,13 +10111,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.453206, y: -0.22894308, z: 0.2301883, w: 0.83018243}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 372868595}
-  m_LocalEulerAnglesHint: {x: 59.08, y: -19.495, z: 19.874}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &410087042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10149,6 +10147,19 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!114 &410087043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410087039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59ef3de2916f8b145a446d1da96e803d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Q17pD.PalmIsland.LightStalk
+  _curve: 45
 --- !u!1001 &411165247
 PrefabInstance:
   m_ObjectHideFlags: 0
