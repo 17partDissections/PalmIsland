@@ -22,7 +22,7 @@ namespace Q17pD.PalmIsland.Player
             _rotation.Init(_actionMap);
 
             TryGetComponent<Movement>(out _movement); TryGetComponent<Inventory>(out _inventory);
-            _movement.Init(_actionMap, audioHandler, _groundCheck);
+            _movement.Init(_actionMap, audioHandler, _groundCheck, _rotation.gameObject);
 
             _canvas = GetComponentInChildren<Canvas.Canvas>();
             _canvas.Init(_actionMap);

@@ -1,4 +1,5 @@
 using DFTGames.Localization;
+using Q17pD.PalmIsland.Interface;
 using Q17pD.PalmIsland.Items;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,18 +12,26 @@ namespace Q17pD.PalmIsland.Player.Canvas
     public class Canvas : MonoBehaviour
     {
         [HideInInspector] public Image Crosshair;
-        [HideInInspector] public LocalizeTMPro ItemNameText;
         [SerializeField] private GameObject _HUD;
         [SerializeField] private GameObject _inventory;
+        [SerializeField] private Sprite _empty, _crosshairLook, _crosshairInteract;
         [SerializeField] private List<ItemSlot> _itemSlots;
+        private LocalizeTMPro _itemNameText;
         private PlayerActionMap _actionMap;
 
         public void Init(PlayerActionMap actionMap)
         {
             Crosshair = _HUD.GetComponentInChildren<Image>();
-            ItemNameText = _HUD.GetComponentInChildren<LocalizeTMPro>();
+            _itemNameText = _HUD.GetComponentInChildren<LocalizeTMPro>();
             _actionMap = actionMap;
             _actionMap.Player.Inventory.started += OpenOrCloseVisualInventory;
+        }
+        public void ChangeCrosshair(ObservableType crosshair = ObservableType.None, string key = "")
+        {
+            bool type = crosshair == ObservableType.Look || crosshair == ObservableType.Interact;
+            Crosshair.sprite = type ? (crosshair == ObservableType.Look ? _crosshairLook : _crosshairInteract) : _empty; //dis is insane
+            _itemNameText.localizationKey = type ? key : "";
+            _itemNameText.UpdateLocale();
         }
         private void OpenOrCloseVisualInventory(InputAction.CallbackContext context)
         {

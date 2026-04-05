@@ -9,10 +9,10 @@ namespace Q17pD.PalmIsland.Player
 {
     public class EntityDetector : MonoBehaviour
     {
+        [Range(1,50)][SerializeField] private int _distance = 10;
         private Camera _camera;
         private RectTransform _crosshair;
         private WaitForSeconds _sleep = new WaitForSeconds(0.1f);
-        private LocalizeTMPro _nameText;
         private IObservable _lastObservableItem;
         private Canvas.Canvas _canvas;
         private Inventory _inventory;
@@ -21,9 +21,8 @@ namespace Q17pD.PalmIsland.Player
         {
             _inventory = inventory;
             _canvas = canvas;
-            _nameText = _canvas.ItemNameText;
             _crosshair = _canvas.Crosshair.rectTransform;
-            actionMap.Player.Interact.performed += Interact;
+            actionMap.Player.Interact.started += Interact;
             _camera = camera;
         }
         private IEnumerator Start()
@@ -32,19 +31,17 @@ namespace Q17pD.PalmIsland.Player
             {
                 yield return _sleep;
                 Ray ray = RectTransformUtility.ScreenPointToRay(_camera, _crosshair.position);
-                if (Physics.Raycast(ray, out RaycastHit hit, 5))
+
+                if (Physics.Raycast(ray, out RaycastHit hit, _distance))
                 {
                     if (hit.transform.TryGetComponent<IObservable>(out IObservable observableItem))
                     {
-                        observableItem.ShowName(_nameText);
+                        _canvas.ChangeCrosshair(observableItem.Type, observableItem.NameKey);
                         _lastObservableItem = observableItem;
                     }
-                    else if (_lastObservableItem != null)
-                    {
-                        _lastObservableItem.HideName(_nameText);
-                        _lastObservableItem = null;
-                    }
+                    else if (_lastObservableItem != null) { _canvas.ChangeCrosshair(); _lastObservableItem = null; }
                 }
+                else if (_lastObservableItem != null) { _canvas.ChangeCrosshair(); _lastObservableItem = null; }
             }
         }
         private void Interact(InputAction.CallbackContext context)
@@ -57,6 +54,5 @@ namespace Q17pD.PalmIsland.Player
                         interectableItem.Interact(_inventory, _canvas);
             }
         }
-
     }
 }
