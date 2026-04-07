@@ -47,11 +47,9 @@ namespace Q17pD.PalmIsland.Player
         private void Interact(InputAction.CallbackContext context)
         {
             Ray ray = RectTransformUtility.ScreenPointToRay(_camera, _crosshair.position);
-            if (Physics.Raycast(ray, out RaycastHit hit, 5))
+            if (Physics.Raycast(ray, out RaycastHit hit, _distance))
             {
-                if (hit.transform.TryGetComponent<IInterectable>(out IInterectable interectableItem))
-                    if(interectableItem is InGameItem)
-                        interectableItem.Interact(_inventory, _canvas);
+                if (hit.transform.TryGetComponent<IInterectable>(out IInterectable interectableItem)) interectableItem.Interact(_inventory, _canvas);
             }
         }
     }

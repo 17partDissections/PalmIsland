@@ -16,15 +16,19 @@ namespace Q17pD.PalmIsland.Player.Canvas
         [SerializeField] private GameObject _inventory;
         [SerializeField] private Sprite _empty, _crosshairLook, _crosshairInteract;
         [SerializeField] private List<ItemSlot> _itemSlots;
+        [SerializeField] private TrashSlot _trashSlot;
         private LocalizeTMPro _itemNameText;
         private PlayerActionMap _actionMap;
 
-        public void Init(PlayerActionMap actionMap)
+        public void Init(PlayerActionMap actionMap, Inventory inventory)
         {
             Crosshair = _HUD.GetComponentInChildren<Image>();
             _itemNameText = _HUD.GetComponentInChildren<LocalizeTMPro>();
             _actionMap = actionMap;
             _actionMap.Player.Inventory.started += OpenOrCloseVisualInventory;
+            PointerStorage pointerStorage = new PointerStorage();
+            foreach (var slot in _itemSlots) slot.Init(pointerStorage);
+            _trashSlot.Init(pointerStorage, inventory);
         }
         public void ChangeCrosshair(ObservableType crosshair = ObservableType.None, string key = "")
         {
@@ -54,7 +58,7 @@ namespace Q17pD.PalmIsland.Player.Canvas
         }
         public void AddItem(InGameItem inGameItem)
         {
-            ItemSlot freeSlot = _itemSlots.FirstOrDefault(x => x.ItemNameKey.localizationKey == "Empty");
+            ItemSlot freeSlot = _itemSlots.FirstOrDefault(x => x.ItemNameKey.localizationKey == string.Empty);
             freeSlot.ItemNameKey.localizationKey = inGameItem.NameKey;
             freeSlot.ItemDescriptionKey.localizationKey = inGameItem.NameKey + "Desc";
             freeSlot.IconImage.sprite = inGameItem.ItemIcon;

@@ -18,7 +18,7 @@ namespace Q17pD.PalmIsland.Player.Canvas
         private int _clicks;
         private PointerStorage _pointerStorage;
 
-        private void Start() { _pointerStorage = new PointerStorage(); }
+        public void Init(PointerStorage pointerStorage) { _pointerStorage = pointerStorage; ItemDescriptionKey.gameObject.SetActive(false); }
 
         public void OnPointerEnter(PointerEventData eventData) { ItemDescriptionKey.gameObject.SetActive(true); }
         public void OnPointerExit(PointerEventData eventData) { ItemDescriptionKey.gameObject.SetActive(false); }
@@ -40,14 +40,15 @@ namespace Q17pD.PalmIsland.Player.Canvas
         }
         public void OnDrop(PointerEventData eventData)
         {
-            if (_pointerStorage.ItemSlot != null && ItemNameKey.localizationKey == "Empty")
+            if (_pointerStorage.ItemSlot != null && ItemNameKey.localizationKey == string.Empty)
             {
                 ItemNameKey.localizationKey = _pointerStorage.ItemSlot.ItemNameKey.localizationKey;
                 ItemDescriptionKey.localizationKey = _pointerStorage.ItemSlot.ItemDescriptionKey.localizationKey;
                 ItemNameKey.UpdateLocale(); ItemDescriptionKey.UpdateLocale();
                 IconImage.sprite = _pointerStorage.ItemSlot.IconImage.sprite;
-                _pointerStorage.ItemSlot.ItemNameKey.localizationKey = "Empty";
-                _pointerStorage.ItemSlot.ItemDescriptionKey.localizationKey = "";
+                _pointerStorage.ItemSlot.ItemNameKey.localizationKey = string.Empty;
+                _pointerStorage.ItemSlot.ItemDescriptionKey.localizationKey = string.Empty;
+                _pointerStorage.ItemSlot.ItemNameKey.UpdateLocale(); _pointerStorage.ItemSlot.ItemDescriptionKey.UpdateLocale();
                 _pointerStorage.ItemSlot.IconImage.sprite = _pointerStorage.ItemSlot.EmptyIconSprite;
                 _pointerStorage.ItemSlot = null;
             }

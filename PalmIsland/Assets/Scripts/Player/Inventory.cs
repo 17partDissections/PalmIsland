@@ -4,6 +4,7 @@ using System;
 using Q17pD;
 using Q17pD.PalmIsland.Factories;
 using Q17pD.PalmIsland.Items;
+using Unity.Cinemachine;
 
 namespace Q17pD.PalmIsland.Player
 {
@@ -14,10 +15,12 @@ namespace Q17pD.PalmIsland.Player
         private List<String> _playerInventory = new List<String>();
         private AudioHandler _audioHandler;
         private ItemObjectPool _itemObjectPool;
-        public void Init(AudioHandler audioHandler, ItemObjectPool itemObjectPool)
+        private CinemachineBrain _cinemachineBrain;
+        public void Init(AudioHandler audioHandler, ItemObjectPool itemObjectPool, CinemachineBrain cinemachineBrain)
         {
             _audioHandler = audioHandler;
             _itemObjectPool = itemObjectPool;
+            _cinemachineBrain = cinemachineBrain;
         }
         public void AddItem(GameObject itemObject, string itemNameKey)
         {
@@ -31,7 +34,7 @@ namespace Q17pD.PalmIsland.Player
         {
             //_audioHandler.PlaySFX(item.ItemSound_Drop, 1);
             InGameItem itemFromPool = _itemObjectPool.GetFromPool(itemNameKey);
-            itemFromPool.transform.position = transform.position + transform.TransformDirection(Vector3.fwd);
+            itemFromPool.transform.position = transform.position + _cinemachineBrain.transform.TransformDirection(Vector3.fwd * 1.5f);
         }
     }
 }
