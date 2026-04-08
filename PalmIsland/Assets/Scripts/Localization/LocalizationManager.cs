@@ -6,7 +6,18 @@ namespace MBW.WaST
 {
     public class LocalizationManager : MonoBehaviour
     {
-        private List<SystemLanguage> _languages = new List<SystemLanguage> { SystemLanguage.English, SystemLanguage.Russian, SystemLanguage.Polish, SystemLanguage.German, SystemLanguage.Unknown };
+        private List<SystemLanguage> _languages = new List<SystemLanguage> 
+        {
+            SystemLanguage.English,
+            SystemLanguage.German,
+            SystemLanguage.Polish,
+            SystemLanguage.Finnish,
+            SystemLanguage.Estonian,
+            SystemLanguage.Latvian,
+            SystemLanguage.Lithuanian,
+            SystemLanguage.Russian,
+            SystemLanguage.Ukrainian,
+        };
         private int _languageIndex;
 
         private void Start() { _languageIndex = PlayerPrefs.GetInt("LangIndex", 0); }

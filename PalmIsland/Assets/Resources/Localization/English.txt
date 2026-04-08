@@ -1,0 +1,37 @@
+//CommonLocales
+	Yes=Yes
+	No=No
+//Menu/Common
+	Apply=Apply
+	Back=Back
+	Paused=Paused
+	Resume=Resume
+//Menu/Main
+	Play=Play
+	Options=Options
+	Credits=Credits
+	Quit=Quit to desktop
+	Quit2Menu=Quit to menu
+	Blog=An official Q17pD's telegram channel for russian audience about his life. It also contains projects news and some shitposts.
+	Repo=Palm Island is an open-source project. You can watch its code or changes in its Github repository.
+//Menu/Options
+	Language=Language
+	VideosNGraphics=Video and graphics
+	Sound=Sound
+	Music=Music
+	SFX=SFX
+//Game/Entities/Inspectable
+	Brick=Brick
+	BrickQuote=I cant reach that brick.
+	StrayCat=Stray cat
+	DeadCat1=Dead cat
+	DeadCat1Quote=A dead cat...
+	DeadCat2=Vent cat reference :D
+	DeadCat2Quote=Hello kitty...
+//Game/Entities/Collectable
+	Coffee=Coffee
+	CoffeeDesc=Just a cup of coffee\nand no more!
+	Map=Island map
+	MapDesc=Open it to see your current objectives
+//Game/Entities/Palms
+	StrangerPalm=Stranger palm
