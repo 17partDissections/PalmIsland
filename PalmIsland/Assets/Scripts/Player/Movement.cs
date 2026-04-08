@@ -7,7 +7,6 @@ namespace Q17pD.PalmIsland.Player
     public class Movement : MonoBehaviour
     {
         [Range(1, 10)][SerializeField] private float _speed = 6;
-        [SerializeField] private AudioClip _jumpSound;
         private GameObject _rotation;
         private Rigidbody _rigidbody;
         private Vector2 _moveInput;
