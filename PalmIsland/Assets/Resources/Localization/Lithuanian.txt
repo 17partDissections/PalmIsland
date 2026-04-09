@@ -1,0 +1,37 @@
+﻿//CommonLocales
+	Yes=Taip
+	No=Ne
+//Menu/Common
+	Apply=Taikyti
+	Back=Atgal
+	aused=Pristabdyta
+	Resume=Tęsti
+//Menu/Main
+	Play=Žaisti
+	Options=Nustatymai
+	Credits=Titrai
+	Quit=Išeiti į darbalaukį
+	Quit2Menu=Išeiti į meniu
+	Blog=Oficialus Q17pD telegram kanalas apie jo gyvenimą rusų auditorijai. Jame taip pat yra projektų naujienos ir šūdpostai.
+	Repo=Palm Island yra atviro kodo projektas. Gali pažiūrėti jo kodą ar pakeitimus Github saugykloje.
+//Menu/Options
+	Language=Kalba
+	VideosNGraphics=Vaizdo įrašas ir grafika
+	Sound=Garsas
+	Music=Muzika
+	SFX=SFX
+//Game/Entities/Inspectable
+	Brick=Plyta
+	BrickQuote=Nepasiekiu tos plytos.
+	StrayCat=Beglobis katinas
+	DeadCat1=Negyva katė
+	DeadCat1Quote=Negyva katė…
+	DeadCat2=Negyva katė
+	DeadCat2Quote=Hello kitty…
+//Game/Entities/Collectable
+	Coffee=Kava
+	CoffeeDesc=Tiesiog puodelis kavos\nir nieko daugiau!
+	Map=Salos žemėlapis
+	MapDesc=Atidaryk, kad pamatytum savo dabartinius tikslus
+//Game/Entities/Palms
+	StrangerPalm=Svetimas delnas

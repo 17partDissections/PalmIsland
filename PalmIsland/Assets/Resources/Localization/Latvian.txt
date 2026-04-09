@@ -1,0 +1,37 @@
+﻿//CommonLocales
+	Yes=Jā
+	No=Nē
+//Menu/Common
+	Apply=Piemērot
+	Back=Atpakaļ
+	Paused=Apturēts
+	Resume=Turpināt
+//Menu/Main
+	Play=Spēlēt
+	Options=Iespējas
+	Credits=Titri
+	Quit=Iziet uz darbvirsmu
+	Quit2Menu=Iziet uz izvēlni
+	Blog=Q17pD oficiālais Telegram kanāls par viņa dzīvi krievu auditorijai. Satur arī projektu ziņas un dažus šitpostus.
+	Repo=Palm Island ir atvērtā koda projekts. Tā kodu vai izmaiņas vari apskatīt Github repozitorijā.
+//Menu/Options
+	Language=Valoda
+	VideosNGraphics=Video un grafika
+	Sound=Skaņa
+	Music=Mūzika
+	SFX=SFX
+//Game/Entities/Inspectable
+	Brick=Ķieģelis
+	BrickQuote=Es nevaru aizsniegt šo ķieģeli.
+	StrayCat=Klaiņojošs kaķis
+	DeadCat1=Beigts kaķis
+	DeadCat1Quote=Beigts kaķis…
+	DeadCat2=Beigts kaķis
+	DeadCat2Quote=Hello kitty…
+//Game/Entities/Collectable
+	Coffee=Kafija
+	CoffeeDesc=Tikai kafijas krūze\nun nekas vairāk!
+	Map=Salu karte
+	MapDesc=Atver, lai redzētu savus pašreizējos mērķus
+//Game/Entities/Palms
+	StrangerPalm=Sveša plauksta

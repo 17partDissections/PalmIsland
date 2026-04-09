@@ -1,0 +1,37 @@
+﻿//CommonLocales
+	Yes=Jah
+	No=EI
+//Menu/Common
+	Apply=Rakenda
+	Back=Tagasi
+	Paused=Peatatud
+	Resume=Jätka
+//Menu/Main
+	Play=Mängi
+	Options=Valikud
+	Credits=Autorid
+	Quit=Välju töölauale
+	Quit2Menu=Välju menüüsse
+	Blog=Q17pD ametlik telegrammikanal tema elust venekeelsele publikule. Sisaldab ka projektide uudiseid ja shitposte.
+	Repo=Palm Island on avatud lähtekoodiga projekt. Saad vaadata selle koodi või muudatusi Githubi hoidlas.
+//Menu/Options
+	Language=Keel
+	VideosNGraphics=Video ja graafika
+	Sound=Heli
+	Music=Muusika
+	SFX=SFX
+//Game/Entities/Inspectable
+	Brick=Tellis
+	BrickQuote=Ma ei ulatu selle telliseni.
+	StrayCat=Hulkuv kass
+	DeadCat1=Surnud kass
+	DeadCat1Quote=Surnud kass…
+	DeadCat2=Surnud kass
+	DeadCat2Quote=Hello kitty…
+//Game/Entities/Collectable
+	Coffee=Kohv
+	CoffeeDesc=Lihtsalt tass kohvi\nja ei midagi muud!
+	Map=Saare kaart
+	MapDesc=Ava, et näha oma hetke eesmärke
+//Game/Entities/Palms
+	StrangerPalm=Võõras peopesa

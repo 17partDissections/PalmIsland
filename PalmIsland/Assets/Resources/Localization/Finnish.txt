@@ -1,0 +1,37 @@
+﻿//CommonLocales
+	Yes=Kyllä
+	No=Ei
+//Menu/Common
+	Apply=Käytä
+	Back=Takaisin
+	Paused=Tauko
+	Resume=Jatka
+//Menu/Main
+	Play=Pelaa
+	Options=Asetukset
+	Credits=Tekijät
+	Quit=Lopeta työpöydälle
+	Quit2Menu=Lopeta valikkoon
+	Blog=Q17pD:n virallinen Telegram-kanava hänen elämästään venäläiselle yleisölle. Sisältää myös projektien uutisia ja shitposteja.
+	Repo=Palm Island on avoimen lähdekoodin projekti. Voit tarkastella sen koodia tai muutoksia Github-repositoriossa.
+//Menu/Options
+	Language=Kieli
+	VideosNGraphics=Video ja grafiikka
+	Sound=Ääni
+	Music=Musiikki
+	SFX=SFX
+//Game/Entities/Inspectable
+	Brick=Tiili
+	BrickQuote=En yletä siihen tiileen.
+	StrayCat=Kulkukissa
+	DeadCat1=Kuollut kissa
+	DeadCat1Quote=Kuollut kissa…
+	DeadCat2=Kuollut kissa
+	DeadCat2Quote=Hello kitty…
+//Game/Entities/Collectable
+	Coffee=Kahvi
+	CoffeeDesc=Vain kuppi kahvia\nja ei muuta!
+	Map=Saaren kartta
+	MapDesc=Avaa nähdäksesi nykyiset tavoitteesi
+//Game/Entities/Palms
+	StrangerPalm=Vieras kämmen
