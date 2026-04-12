@@ -1,6 +1,7 @@
 //CommonLocales
 	Yes=Да
 	No=Нет
+	Version=Версия
 //Menu/Common
 	Apply=Принять
 	Back=Назад
@@ -14,10 +15,16 @@
 	Quit2Menu=Выйти в меню
 	Blog=Официальный телеграм канал Q17pD о его жизни для русской аудитории. Также там публикуются новости о проектах и всякие щитпосты.
 	Repo=Palm Island - это open-source проект. Вы можете посмотреть на его код или изменения в его репозитории на Github.
-//Menu/Options
+//Menu/Options/Main
 	Language=Язык
-	VideosNGraphics=Видео и гафика
+	Video=Видео
 	Sound=Звук
+//Menu/Options/Video
+	Resolution=Разрешение
+	ScreenMode=Режим экрана
+	VSync=Вертикальная синхронизация
+	Subtitles=Субтитры
+//Menu/Options/Sound
 	Music=Музыка
 	SFX=SFX
 //Game/Entities/Inspectable

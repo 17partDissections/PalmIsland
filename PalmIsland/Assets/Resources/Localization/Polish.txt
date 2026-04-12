@@ -1,6 +1,7 @@
 ﻿//CommonLocales
 	Yes=Tak
 	No=Nie
+	Version=Wersja
 //Menu/Common
 	Apply=Zastosuj
 	Back=Wróć
@@ -14,10 +15,16 @@
 	Quit2Menu=Wyjdź do menu
 	Blog=Oficjalny kanał Q17pD na Telegramie o jego życiu (dla rosyjskiej publiczności). Zawiera też newsy o projektach i shity.
 	Repo=Palm Island to projekt open source. Możesz obejrzeć kod lub zmiany w repozytorium na Githubie.
-//Menu/Options
+//Menu/Options/Main
 	Language=Język
-	VideosNGraphics=Wideo i grafika
+	Video=Wideo
 	Sound=Dźwięk
+//Menu/Options/Video
+	Resolution=Rozdzielczość
+	ScreenMode=Tryb ekranu
+	VSync=VSync
+	Subtitles=Napisy
+//Menu/Options/Sound
 	Music=Muzyka
 	SFX=SFX
 //Game/Entities/Inspectable
@@ -26,8 +33,8 @@
 	StrayCat=Bezdomny kot
 	DeadCat1=Martwy kot
 	DeadCat1Quote=Martwy kot…
-	DeadCat2=Martwy kot
-	DeadCat2Quote=Hello kitty…
+	DeadCat2=Odniesienie do kota z Vent :D
+	DeadCat2Quote=Witaj, Kitty...
 //Game/Entities/Collectable
 	Coffee=Kawa
 	CoffeeDesc=Tylko filiżanka kawy\ni nic więcej!

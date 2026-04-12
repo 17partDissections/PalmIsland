@@ -1,6 +1,7 @@
 ﻿//CommonLocales
 	Yes=Jah
 	No=EI
+	Version=Versioon
 //Menu/Common
 	Apply=Rakenda
 	Back=Tagasi
@@ -14,10 +15,16 @@
 	Quit2Menu=Välju menüüsse
 	Blog=Q17pD ametlik telegrammikanal tema elust venekeelsele publikule. Sisaldab ka projektide uudiseid ja shitposte.
 	Repo=Palm Island on avatud lähtekoodiga projekt. Saad vaadata selle koodi või muudatusi Githubi hoidlas.
-//Menu/Options
+//Menu/Options/Main
 	Language=Keel
-	VideosNGraphics=Video ja graafika
+	Video=Video
 	Sound=Heli
+//Menu/Options/Video
+	Resolution=Eraldusvõime
+	ScreenMode=Ekraani režiim
+	VSync=VSünk
+	Subtitles=Subtiitrid
+//Menu/Options/Sound
 	Music=Muusika
 	SFX=SFX
 //Game/Entities/Inspectable
@@ -26,8 +33,8 @@
 	StrayCat=Hulkuv kass
 	DeadCat1=Surnud kass
 	DeadCat1Quote=Surnud kass…
-	DeadCat2=Surnud kass
-	DeadCat2Quote=Hello kitty…
+	DeadCat2=Vent kassi viide :D
+	DeadCat2Quote=Tere, kiisu...
 //Game/Entities/Collectable
 	Coffee=Kohv
 	CoffeeDesc=Lihtsalt tass kohvi\nja ei midagi muud!
