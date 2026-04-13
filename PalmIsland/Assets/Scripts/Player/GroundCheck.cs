@@ -26,7 +26,7 @@ namespace Q17pD.PalmIsland.Player
                 {
                     var clip = Random.Range(0, _floor.WalkSounds.Count);
                     Debug.Log(clip);
-                    _audioHandler.PlaySFX(_floor.WalkSounds[clip]);
+                    _audioHandler.PlaySound(SoundType.SFX, _floor.WalkSounds[clip]);
                 }
             }
         }

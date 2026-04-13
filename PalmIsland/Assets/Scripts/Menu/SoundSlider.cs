@@ -20,8 +20,7 @@ namespace Q17pD.PalmIsland
         }
         public void ChangeValue()
         {
-            if (_sliderType == SoundType.Music) _audioHandler.SetMusicVolumeFromSlider(_slider.value);
-            else _audioHandler.SetSFXVolumeFromSlider(_slider.value);
+            _audioHandler.SetVolumeFromSlider(_sliderType, _slider.value);
             _handleValue.text = (Math.Round((_slider.value * 100), 0)).ToString();
         }
         public void Save()

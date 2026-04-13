@@ -61,17 +61,17 @@ namespace Q17pD
             _audioMixerGroup.audioMixer.SetFloat("MusicVolume", PlayerPrefs.GetFloat("MusicVolume", 0f));
             _audioMixerGroup.audioMixer.SetFloat("SFXVolume", PlayerPrefs.GetFloat("SFXVolume", 0f));
         }
-        public void SetMusicVolumeFromSlider(float value)
+        public void SetVolumeFromSlider(SoundType soundType, float value)
         {
             _tempMusicDB = Mathf.Lerp(-80, 0, value);
-            _audioMixerGroup.audioMixer.SetFloat("MusicVolume", _tempMusicDB);
-            
+            if (soundType == SoundType.Music) _audioMixerGroup.audioMixer.SetFloat("MusicVolume", _tempMusicDB);
+            else _audioMixerGroup.audioMixer.SetFloat("MusicVolume", _tempMusicDB);
         }
-        public void SetSFXVolumeFromSlider(float value)
+        public void SetVolumeFromToggle(SoundType soundType, bool value)
         {
-            _tempSFXDB = Mathf.Lerp(-80, 0, value);
-            _audioMixerGroup.audioMixer.SetFloat("SFXVolume", _tempSFXDB);
-            
+            _tempMusicDB = value == true ? 0 : -80;
+            if (soundType == SoundType.Music) _audioMixerGroup.audioMixer.SetFloat("MusicVolume", _tempMusicDB);
+            else _audioMixerGroup.audioMixer.SetFloat("MusicVolume", _tempMusicDB);
         }
     }
     public enum SoundType { Music, SFX }
