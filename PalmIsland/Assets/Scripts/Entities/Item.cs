@@ -1,5 +1,5 @@
 using UnityEngine;
-namespace Q17pD.PalmIsland.Items
+namespace Q17pD.PalmIsland.Entities
 {
     [CreateAssetMenu(fileName = "NewItem", menuName = "Items")]
     public class Item : ScriptableObject

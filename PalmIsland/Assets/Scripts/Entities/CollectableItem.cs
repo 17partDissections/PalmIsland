@@ -4,15 +4,14 @@ using Q17pD.PalmIsland.Player;
 using UnityEngine;
 using Zenject;
 
-namespace Q17pD.PalmIsland.Items
+namespace Q17pD.PalmIsland.Entities
 {
-    public class InGameItem : MonoBehaviour, IObservable, IInterectable
+    public class CollectableItem : MonoBehaviour, IObservable, IInterectable
     {
-        [SerializeField] private ObservableType _type;
         [SerializeField] private string _itemNameKey;
         public Sprite ItemIcon;
         public string NameKey { get => _itemNameKey; }
-        public ObservableType Type { get => _type; }
+        public ObservableType Type { get => ObservableType.Interact; }
 
         [Inject] private void Construct(ItemObjectPool pool) { pool.AddToPool(this); }
 

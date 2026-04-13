@@ -1,6 +1,6 @@
 using DFTGames.Localization;
 using Q17pD.PalmIsland.Interface;
-using Q17pD.PalmIsland.Items;
+using Q17pD.PalmIsland.Entities;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -14,7 +14,7 @@ namespace Q17pD.PalmIsland.Player.Canvas
         [HideInInspector] public Image Crosshair;
         [SerializeField] private GameObject _HUD;
         [SerializeField] private GameObject _inventory;
-        [SerializeField] private Sprite _empty, _crosshairLook, _crosshairInteract;
+        [SerializeField] private Sprite _empty, _crosshairInspect, _crosshairInteract;
         [SerializeField] private List<ItemSlot> _itemSlots;
         [SerializeField] private TrashSlot _trashSlot;
         private LocalizeTMPro _itemNameText;
@@ -32,8 +32,8 @@ namespace Q17pD.PalmIsland.Player.Canvas
         }
         public void ChangeCrosshair(ObservableType crosshair = ObservableType.None, string key = "")
         {
-            bool type = crosshair == ObservableType.Look || crosshair == ObservableType.Interact;
-            Crosshair.sprite = type ? (crosshair == ObservableType.Look ? _crosshairLook : _crosshairInteract) : _empty; //dis is insane
+            bool type = crosshair == ObservableType.Inspect || crosshair == ObservableType.Interact;
+            Crosshair.sprite = type ? (crosshair == ObservableType.Inspect ? _crosshairInspect : _crosshairInteract) : _empty; //dis is insane
             _itemNameText.localizationKey = type ? key : "";
             _itemNameText.UpdateLocale();
         }
@@ -56,7 +56,7 @@ namespace Q17pD.PalmIsland.Player.Canvas
                 _actionMap.Player.Move.Enable();
             }
         }
-        public void AddItem(InGameItem inGameItem)
+        public void AddItem(CollectableItem inGameItem)
         {
             ItemSlot freeSlot = _itemSlots.FirstOrDefault(x => x.ItemNameKey.localizationKey == string.Empty);
             freeSlot.ItemNameKey.localizationKey = inGameItem.NameKey;

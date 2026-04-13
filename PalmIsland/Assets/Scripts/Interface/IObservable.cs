@@ -7,5 +7,5 @@ namespace Q17pD.PalmIsland.Interface
         public string NameKey { get; }
         public ObservableType Type { get; }
     }
-    public enum ObservableType { None, Look, Interact }
+    public enum ObservableType { None, Inspect, Interact }
 }

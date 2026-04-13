@@ -1,6 +1,6 @@
 using DFTGames.Localization;
 using Q17pD.PalmIsland.Interface;
-using Q17pD.PalmIsland.Items;
+using Q17pD.PalmIsland.Entities;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
