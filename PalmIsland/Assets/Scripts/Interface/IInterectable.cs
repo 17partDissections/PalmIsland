@@ -5,6 +5,6 @@ namespace Q17pD.PalmIsland.Interface
 {
     public interface IInterectable
     {
-        public void Interact(Inventory inventory = null, Canvas playerCanvas = null);
+        public void Interact(Inventory inventory = null, Canvas playerCanvas = null, AudioHandler audioHandler = null);
     }
 }

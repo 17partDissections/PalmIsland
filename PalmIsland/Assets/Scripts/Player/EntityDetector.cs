@@ -16,13 +16,15 @@ namespace Q17pD.PalmIsland.Player
         private IObservable _lastObservableItem;
         private Canvas.Canvas _canvas;
         private Inventory _inventory;
+        private AudioHandler _audioHandler;
 
-        public void Init(PlayerActionMap actionMap, Inventory inventory, Canvas.Canvas canvas, Camera camera)
+        public void Init(PlayerActionMap actionMap, Inventory inventory, Canvas.Canvas canvas, AudioHandler audioHandler, Camera camera)
         {
             _inventory = inventory;
             _canvas = canvas;
             _crosshair = _canvas.Crosshair.rectTransform;
             actionMap.Player.Interact.started += Interact;
+            _audioHandler = audioHandler;
             _camera = camera;
         }
         private IEnumerator Start()
@@ -49,7 +51,7 @@ namespace Q17pD.PalmIsland.Player
             Ray ray = RectTransformUtility.ScreenPointToRay(_camera, _crosshair.position);
             if (Physics.Raycast(ray, out RaycastHit hit, _distance))
             {
-                if (hit.transform.TryGetComponent<IInterectable>(out IInterectable interectableItem)) interectableItem.Interact(_inventory, _canvas);
+                if (hit.transform.TryGetComponent<IInterectable>(out IInterectable interectableItem)) interectableItem.Interact(_inventory, _canvas, _audioHandler);
             }
         }
     }

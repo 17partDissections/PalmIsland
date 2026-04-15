@@ -12,8 +12,8 @@ namespace Q17pD.PalmIsland.Player.Canvas
     public class Canvas : MonoBehaviour
     {
         [HideInInspector] public Image Crosshair;
-        [SerializeField] private GameObject _HUD;
-        [SerializeField] private GameObject _inventory;
+        [SerializeField] private GameObject _HUD, _inventory;
+        [SerializeField] private Subtitles _subtitles;
         [SerializeField] private Sprite _empty, _crosshairInspect, _crosshairInteract;
         [SerializeField] private List<ItemSlot> _itemSlots;
         [SerializeField] private TrashSlot _trashSlot;
@@ -37,6 +37,7 @@ namespace Q17pD.PalmIsland.Player.Canvas
             _itemNameText.localizationKey = type ? key : "";
             _itemNameText.UpdateLocale();
         }
+        public bool Subtitle(string key, float time) { return _subtitles.Subtitle(key, time); }
         private void OpenOrCloseVisualInventory(InputAction.CallbackContext context)
         {
             if (!_inventory.activeSelf)

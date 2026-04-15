@@ -29,7 +29,7 @@ namespace Q17pD.PalmIsland.Player
             _canvas.Init(_actionMap, _inventory);
 
             _entityDetector = GetComponentInChildren<EntityDetector>();
-            _entityDetector.Init(_actionMap, _inventory, _canvas, cinemachineBrain.GetComponent<Camera>());
+            _entityDetector.Init(_actionMap, _inventory, _canvas, audioHandler, cinemachineBrain.GetComponent<Camera>());
 
         }
         private void OnDestroy() { _actionMap.Disable(); _actionMap.Dispose(); }

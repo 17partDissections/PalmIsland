@@ -15,7 +15,7 @@ namespace Q17pD.PalmIsland.Entities
 
         [Inject] private void Construct(ItemObjectPool pool) { pool.AddToPool(this); }
 
-        public void Interact(Inventory inventory = null, Player.Canvas.Canvas playerCanvas = null)
+        public void Interact(Inventory inventory = null, Player.Canvas.Canvas playerCanvas = null, AudioHandler audioHandler = null)
         {
             inventory.AddItem(gameObject, _itemNameKey);
             playerCanvas.AddItem(this);
