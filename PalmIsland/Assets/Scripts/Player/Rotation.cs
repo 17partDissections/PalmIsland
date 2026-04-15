@@ -5,8 +5,8 @@ namespace Q17pD.PalmIsland.Player
 {
     public class Rotation : MonoBehaviour
     {
-        [Range(1,20)][SerializeField] private float _sensitivity = 10f;
-        [SerializeField] private bool _inverted;
+        private float _sensitivity;
+        private bool _inverted;
         private float _x, _y;
         private Vector2 _lookDelta;
 
@@ -14,6 +14,8 @@ namespace Q17pD.PalmIsland.Player
         {
             actionMap.Player.Look.performed += Look;
             actionMap.Player.Look.canceled += StopLook;
+            _sensitivity = PlayerPrefs.GetFloat("SensitivitySliderValue");
+            _inverted = PlayerPrefs.GetInt("MouseInvertionToggleValue") == 1 ? true : false;
         }
         private void Start()
         {

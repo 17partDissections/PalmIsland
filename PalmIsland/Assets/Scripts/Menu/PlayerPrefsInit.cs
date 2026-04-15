@@ -19,6 +19,8 @@ namespace Q17pD.PalmIsland.Menu
                 PlayerPrefs.SetInt("ScreenModeDropdownValue", 1);
                 PlayerPrefs.SetInt("VSyncToggleValue", 0);
                 PlayerPrefs.SetInt("SubtitlesToggleValue", 1);
+                PlayerPrefs.SetInt("SensitivitySliderValue", 15);
+                PlayerPrefs.SetInt("MouseInvertionToggleValue", 0);
             }
         }
     }
